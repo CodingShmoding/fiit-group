@@ -7,3 +7,116 @@ $r: 'Proxima Nova Regular';
 $b: 'Proxima Nova Bold';
 $eb: 'Proxima Nova Extra Bold';
 
+@mixin br {
+	border: 1px solid rgba($color: #fff, $alpha: 0.1);
+}
+
+// common
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	@include br;
+}
+
+// header
+.header {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	font-family: $b;
+	z-index: 100;
+	@include br;
+
+	&__wrap {
+		width: 1170px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+	&__logo {
+		img {}
+	}
+	&__nav {
+		display: flex;
+		align-items: flex-end;
+	}
+	&__list {
+		display: flex;
+	}
+	&__item {
+		padding-left: 80px;
+
+		a {
+			text-transform: uppercase;
+			text-decoration: none;
+			color: white;
+			font-size: 18px;
+			transition: 0.3s;
+		}
+	}
+
+	&__btn {
+		width: 25px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		position: fixed;
+		right: 100px;
+
+		span {
+			position: relative;
+			display: block;
+			width: 25px;
+			height: 2px;
+			background-color: red;
+		}
+		span::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 10px;
+			width: 25px;
+			height: 2px;
+			background-color: green;
+		}
+		span::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -10px;
+			width: 25px;
+			height: 2px;
+			background-color: yellow;
+		}
+	}
+}
+
+// main
+.main {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/main-bg2.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+
+	&__title {
+		font-size: 48px;
+		font-family: $eb;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		max-width: 600px;
+		@include br;
+	}
+	&__subtitle {}
+	&__square {}
+}

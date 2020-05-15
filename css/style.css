@@ -96,3 +96,131 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-style: normal;
 }
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Proxima Nova Bold";
+  z-index: 100;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header__wrap {
+  width: 1170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__item {
+  padding-left: 80px;
+}
+
+.header__item a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__btn {
+  width: 25px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  right: 100px;
+}
+
+.header__btn span {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: red;
+}
+
+.header__btn span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 25px;
+  height: 2px;
+  background-color: green;
+}
+
+.header__btn span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 25px;
+  height: 2px;
+  background-color: yellow;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/main-bg2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.main__title {
+  font-size: 48px;
+  font-family: "Proxima Nova Extra Bold";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
